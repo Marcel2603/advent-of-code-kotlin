@@ -1,6 +1,5 @@
 fun main() {
-    val day = 1
-    val dayString = day.toString().padStart(2, '0')
+    val dayString = "XX"
 
     fun part1(input: List<String>): Int {
         return input.size
