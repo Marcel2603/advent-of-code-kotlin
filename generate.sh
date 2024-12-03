@@ -1,7 +1,6 @@
 #!/bin/bash
 SRC_DIR="$(pwd)/src"
-#DAY=$(date +%d)
-DAY=02
+DAY=$(date +%d)
 TMPL_FILE="$SRC_DIR/DayXX.kt"
 DAY_TMPL="Day$DAY"
 KOTLIN_FILE="$SRC_DIR/$DAY_TMPL.kt"
