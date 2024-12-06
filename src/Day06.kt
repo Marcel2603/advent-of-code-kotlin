@@ -174,13 +174,14 @@ fun main() {
             }
         }
         var count = 0
-        for (b in possibleBlocks) {
-            var blockedInput = input.toMutableList()
-            blockedInput[b.second] = blockedInput[b.second].addCharAtIndex('#', b.first)
-            if (part1(blockedInput).third) {
-                count++
-            }
-        }
+        possibleBlocks.parallelStream()
+            .forEach({ b ->
+                val blockedInput = input.toMutableList()
+                blockedInput[b.second] = blockedInput[b.second].addCharAtIndex('#', b.first)
+                if (part1(blockedInput).third) {
+                    count++
+                }
+            })
         return count
     }
 
